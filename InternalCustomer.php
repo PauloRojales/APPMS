@@ -114,12 +114,12 @@
       <ul class="sidebar-menu">
         <li class="header">MENU</li>
         <!-- Optionally, you can add icons to the links -->
-          <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+          <li><a href="index.php"><i class="fa fa-dashboard"></i><span>Main Dashboard</span></a></li>
           <li><a href="ExternalCustomer.php"><i class="fa fa-users"></i><span>External Customers</span></a></li>
-			  	<li><a href="#"><i class="fa fa-users"></i>Possible Customers</a></li>
-          <li><a href="InternalCustomer.php"><i class="fa fa-user"></i>Internal Customers</a></li>
-					<li><a href="#"></i><i class="fa fa-money"></i><span>Money In</span></a></li>
-					<li><a href="#"></i><i class="fa fa-money"></i><span>Money Out</span></a>
+          <li><a href="#"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
+          <li class="active" ><a href="InternalCustomer.php"><i class="fa fa-user"></i><span></i>Internal Customers</a></span></li>
+          <li><a href="moneyin.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
+          <li><a href="#"><i class="fa fa-money"></i><span>Money Out</span></a></li>
 					</li>
 			  </ul>
       </ul>
@@ -132,7 +132,7 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1><i class="fa fa-user"></i> Dashboard</h1>
+      <h1><i class="fa fa-users"></i> Dashboard</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li class="active">Dashboard</li>

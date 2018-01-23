@@ -120,8 +120,8 @@
           <li><a href="InternalCustomer.php"><i class="fa fa-user"></i><span></i>Internal Customers</a></span></li>
           <li><a href="moneyin.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
           <li><a href="#"><i class="fa fa-money"></i><span>Money Out</span></a></li>
-					</li>
-			  </ul>
+          </li>
+        </ul>
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -145,11 +145,11 @@
           <div class="box-header with-border">
             <h4 class="box-tittle"><i class="fa fa-users"> </i> External Customers</h4>
               <div class="box-tools pull-right">
-                  <a href="" data-toggle="modal" data-target="#modal-tambah-siswa"><button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New External Customers </button></a>
+                  <a href="" data-toggle="modal" data-target="#PossibleCustomer"><button type="button" class="btn btn-success btn-sm"><i class="fa fa-plus"></i> Add New External Customers </button></a>
               </div>
           </div>
           <div class="box-body">
-          <div class="ViewExternalCustomer"></div>
+          <div class="ViewPossibleCustomer"></div>
           </div>
         </div>
         
@@ -255,7 +255,7 @@
 
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="addfile/data.js"></script>
+<script src="addfile/data3.js"></script>
 <script src="plugins/swal/sweetalert.css"></script>
 <script src="plugins/swal/sweetalert.js"></script>
 <script src="plugins/swal/sweetalert.min.js'"></script>

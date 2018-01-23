@@ -114,12 +114,12 @@
       <ul class="sidebar-menu">
         <li class="header">MENU</li>
          <!-- Optionally, you can add icons to the links -->
-          <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i><span>Dashboard</span></a></li>
+          <li><a href="index.php"><i class="fa fa-dashboard"></i><span>Main Dashboard</span></a></li>
           <li><a href="ExternalCustomer.php"><i class="fa fa-users"></i><span>External Customers</span></a></li>
-			   	<li><a href="#"><i class="fa fa-users"><span></i>Possible Customers</a></span></li>
-          <li><a href="InternalCustomer.php"><i class="fa fa-user"><span></i>Internal Customers</a></span></li>
-					<li><a href="#"></i><i class="fa fa-money"></i><span>Money In</span></a></li>
-					<li><a href="#"></i><i class="fa fa-money"></i><span>Money Out</span></a>
+          <li><a href="#"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
+          <li><a href="InternalCustomer.php"><i class="fa fa-user"></i><span></i>Internal Customers</a></span></li>
+          <li class="active" ><a href="moneyin.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
+          <li><a href="#"><i class="fa fa-money"></i><span>Money Out</span></a></li>
 					</li>
 			  </ul>
       </ul>
@@ -154,66 +154,85 @@
                   <?php  }; ?>
                     </select>
                 </div>
-      <div class="col-md-6">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Cash Receivable</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table class="table table-bordered">
-                <tbody><tr>
-                  <th>Month</th>
-                  <th>Date</th>
-                  <th>Check No.</th>
-                  <th>Bank</th>
-                  <th>Amount</th>
-                  <th style="width: 40px">Status</th>
-                </tr>
-              </tbody></table>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <ul class="pagination pagination-sm no-margin pull-right">
-                <li><a href="#">«</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="box">
-            <div class="box-header with-border">
-              <h3 class="box-title">Cash Receipt</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body">
-              <table class="table table-bordered">
-                <tbody><tr>
-                  <th>Month</th>
-                  <th>Date</th>
-                  <th>Check No.</th>
-                  <th>Bank</th>
-                  <th>Amount</th>
-                  <th style="width: 40px">Status</th>
-                </tr>
-              </tbody></table>
-            </div>
-            <!-- /.box-body -->
-            <div class="box-footer clearfix">
-              <ul class="pagination pagination-sm no-margin pull-right">
-                <li><a href="#">«</a></li>
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">»</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+
+
+                        <div class="form-group">
+                         <div class="col-md-6">
+                          <div class="box">
+                            <div class="box-header with-border">
+                              <h3 class="box-title">Cash Receivable</h3>
+                                </div>
+                              <table class="table table-bordered data-siswa">
+                                <thead>
+                                <tr class="success">
+                                  <th>Month</th>
+                                  <th>Date</th>
+                                  <th>Check No.</th>
+                                  <th>Bank</th>
+                                  <th>Amount</th>
+                                  <th style="width: 40px">Status</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                      <?php
+                      $query = $conn->prepare("SELECT apptopus_payment_month,apptopus_payment_date,apptopus_payment_checkno,apptopus_payment_bank,apptopus_payment_amount,apptopus_payment_status FROM apptopus_payment join  apptopus_externalcustomers WHERE apptopus_externalcustomers.app_school_id = apptopus_payment.apptopus_payment_id ");
+                      $query->execute();
+                      $query->setFetchMode(PDO::FETCH_ASSOC);
+                      while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
+                      <tr>
+                           <td><?php echo $data['apptopus_payment_month']; ?></td>
+                           <td><?php echo $data['apptopus_payment_date']; ?></td>
+                           <td><?php echo $data['apptopus_payment_checkno']; ?></td>
+                           <td><?php echo $data['apptopus_payment_bank']; ?></td>
+                           <td><?php echo $data['apptopus_payment_amount']; ?></td>
+                           <td><?php echo $data['apptopus_payment_status']; ?></td>
+                      </tr>
+                      <?php } ?>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+
+                <div class="form-group">
+                 <div class="col-md-6">
+                  <div class="box">
+                    <div class="box-header with-border">
+                      <h3 class="box-title">Cash Receipt</h3>
+                        </div>
+                      <table class="table table-bordered data-siswa">
+                        <thead>
+                        <tr class="success">
+                          <th>Month</th>
+                          <th>Date</th>
+                          <th>Check No.</th>
+                          <th>Bank</th>
+                          <th>Amount</th>
+                          <th style="width: 40px">Status</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+              <?php
+              $query = $conn->prepare("SELECT * FROM apptopus_payment");
+              $query->execute();
+              $query->setFetchMode(PDO::FETCH_ASSOC);
+              while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
+              <tr>
+                   <td><?php echo $data['apptopus_payment_month']; ?></td>
+                   <td><?php echo $data['apptopus_payment_date']; ?></td>
+                   <td><?php echo $data['apptopus_payment_checkno']; ?></td>
+                   <td><?php echo $data['apptopus_payment_bank']; ?></td>
+                   <td><?php echo $data['apptopus_payment_amount']; ?></td>
+                   <td><?php echo $data['apptopus_payment_status']; ?></td>
+              </tr>
+              <?php } ?>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+
     </section>
 
     <!-- /.content -->
@@ -317,27 +336,11 @@
 
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="addfile/data.js"></script>
+<script src="addfile/data3.js"></script>
 
 
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>
-
-                <script type="text/javascript">
-                  $(function () {
-                  $("#graph_select").change(function() {
-                    var val = $(this).val();
-                    if(val === "pilot_graph_form") {
-                        $("#pilot_graph_form").show();
-                        $("#client_graph_form").hide();
-                    }
-                    else if(val === "client_graph_form") {
-                        $("#client_graph_form").show();
-                        $("#pilot_graph_form").hide();
-                    }
-                  });
-                });
-                </script>
 
 
 </body>
