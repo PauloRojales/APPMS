@@ -863,3 +863,78 @@
         </div>
    
 
+        <div class="modal" id="AddCheck">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span></button>
+                <h3 class="modal-title">Add New Check</h3>
+              </div>
+              <div class="modal-body">
+                <form class="form-horizontal">
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">ID</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="SchoolID" maxlength="200" disabled="true">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">School Name</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="SchoolNameID" maxlength="200" disabled="true">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">Month</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="PaymentMonth" maxlength="200">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">Check No.</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="PaymentCheckNo" maxlength="200">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">Bank</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="PaymentBank" maxlength="200">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">Amout</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="PaymentAmout" maxlength="200">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">Status</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="PaymentStatus" maxlength="200">
+                          </div>
+                      </div>
+
+                      <div class="form-group">
+                          <label for="" class="col-sm-3 control-label">Date</label>
+                          <div class="col-sm-9">
+                          <input type="text" class="form-control" id="PaymentDate" maxlength="200">
+                          </div>
+                      </div>
+                  </form>
+              </div>
+
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary newemployee" data-dismiss="modal">Add</button>
+              </div>
+            </div>
+          </div>
+        </div>

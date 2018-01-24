@@ -141,97 +141,15 @@
 
         <!-- Main content -->
   <section class="content">
-    <div class="form-group">
-                  <label><h3>Select External Customers</h3></label>
-                    <select id ="" class="form-control">
-                    <?php
-                    include "addfile/config.php";
-                    $query = $conn->prepare("SELECT app_school_id,app_school_name FROM apptopus_externalcustomers");
-                    $query->execute();
-                    $query->setFetchMode(PDO::FETCH_ASSOC);
-                    while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
-                    <option value="<?php echo $data["app_school_id"]; ?>"><?php echo $data["app_school_name"];?></option>
-                  <?php  }; ?>
-                    </select>
-                </div>
-
-
-                        <div class="form-group">
-                         <div class="col-md-6">
-                          <div class="box">
-                            <div class="box-header with-border">
-                              <h3 class="box-title">Cash Receivable</h3>
-                                </div>
-                              <table class="table table-bordered data-siswa">
-                                <thead>
-                                <tr class="success">
-                                  <th>Month</th>
-                                  <th>Date</th>
-                                  <th>Check No.</th>
-                                  <th>Bank</th>
-                                  <th>Amount</th>
-                                  <th style="width: 40px">Status</th>
-                                </tr>
-                              </thead>
-                              <tbody>
-                      <?php
-                      $query = $conn->prepare("SELECT apptopus_payment_month,apptopus_payment_date,apptopus_payment_checkno,apptopus_payment_bank,apptopus_payment_amount,apptopus_payment_status FROM apptopus_payment join  apptopus_externalcustomers WHERE apptopus_externalcustomers.app_school_id = apptopus_payment.apptopus_payment_id ");
-                      $query->execute();
-                      $query->setFetchMode(PDO::FETCH_ASSOC);
-                      while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
-                      <tr>
-                           <td><?php echo $data['apptopus_payment_month']; ?></td>
-                           <td><?php echo $data['apptopus_payment_date']; ?></td>
-                           <td><?php echo $data['apptopus_payment_checkno']; ?></td>
-                           <td><?php echo $data['apptopus_payment_bank']; ?></td>
-                           <td><?php echo $data['apptopus_payment_amount']; ?></td>
-                           <td><?php echo $data['apptopus_payment_status']; ?></td>
-                      </tr>
-                      <?php } ?>
-                              </tbody>
-                            </table>
-                          </div>
-                        </div>
-                      </div>
-
-
-                <div class="form-group">
-                 <div class="col-md-6">
-                  <div class="box">
-                    <div class="box-header with-border">
-                      <h3 class="box-title">Cash Receipt</h3>
-                        </div>
-                      <table class="table table-bordered data-siswa">
-                        <thead>
-                        <tr class="success">
-                          <th>Month</th>
-                          <th>Date</th>
-                          <th>Check No.</th>
-                          <th>Bank</th>
-                          <th>Amount</th>
-                          <th style="width: 40px">Status</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-              <?php
-              $query = $conn->prepare("SELECT * FROM apptopus_payment");
-              $query->execute();
-              $query->setFetchMode(PDO::FETCH_ASSOC);
-              while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
-              <tr>
-                   <td><?php echo $data['apptopus_payment_month']; ?></td>
-                   <td><?php echo $data['apptopus_payment_date']; ?></td>
-                   <td><?php echo $data['apptopus_payment_checkno']; ?></td>
-                   <td><?php echo $data['apptopus_payment_bank']; ?></td>
-                   <td><?php echo $data['apptopus_payment_amount']; ?></td>
-                   <td><?php echo $data['apptopus_payment_status']; ?></td>
-              </tr>
-              <?php } ?>
-                      </tbody>
-                    </table>
-                  </div>
-                </div>
-              </div>
+        <div class="box box-success">
+          <div class="box-header with-border">
+            <h4 class="box-tittle"><i class="fa fa-money"> </i> Money In</h4>
+          </div>
+          <div class="box-body">
+          <div class="MoneyInFunc"></div>
+          </div>
+        </div>
+    
 
     </section>
 
@@ -336,7 +254,7 @@
 
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
-<script src="addfile/data3.js"></script>
+<script src="addfile/data4.js"></script>
 
 
 <!-- AdminLTE App -->

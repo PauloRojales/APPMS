@@ -116,7 +116,7 @@
          <!-- Optionally, you can add icons to the links -->
           <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i><span>Main Dashboard</span></a></li>
           <li><a href="ExternalCustomer.php"><i class="fa fa-users"></i><span>External Customers</span></a></li>
-			   	<li><a href="#"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
+			   	<li><a href="PossibleClients.php"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
           <li><a href="InternalCustomer.php"><i class="fa fa-user"></i><span></i>Internal Customers</a></span></li>
 					<li><a href="moneyin.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
 					<li><a href="#"><i class="fa fa-money"></i><span>Money Out</span></a></li>
@@ -153,10 +153,10 @@
 
       <div class="col-sm-6 col-md-4">
         <div class="info-box bg-green">
-          <span class="info-box-icon"><i class="fa fa-male"></i> <i class="fa fa-female"></i></span>
+          <span class="info-box-icon fa fa-female"></span>
           <div class="info-box-content">
             <span class="info-box-text">Possible Customers</span>
-            <span class="info-box-number"><div class="PossibleCustomer"></div></span>
+            <span class="info-box-number"><div class="TotalExternalCustomer"></div></span>
           </div>
         </div>
       </div>
