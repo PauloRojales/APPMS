@@ -1,7 +1,6 @@
             <?php include "modal.php"; ?>
             <div class="form-group">
                   <label><h3>Select External Customers</h3></label>
-                    <form action ="#" method="POST">
                     <select id ="SchoolNumber" class="form-control">
                     <?php
                     include "config.php";
@@ -10,14 +9,14 @@
                     $query->setFetchMode(PDO::FETCH_ASSOC);
                     while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
                     <option value="<?php echo $data["app_school_id"]; ?>"><?php 
-                    $var=$_POST['SchoolNumber'];
-                    echo $var;
-
+$var =1;
+echo $var;
 
                     echo $data["app_school_id"]; echo $data["app_school_name"];?></option>
                   <?php  }; ?>
                     </select>
-                    <form>
+
+ 
                 </div>
 
 
@@ -29,7 +28,7 @@
                                 </div>
                               <table class="table table-bordered data">
                                 <thead>
-                                <tr class="success">
+                                <tr cs="success">
                                   <th>Month</th>
                                   <th>Date</th>
                                   <th>Check No.</th>
@@ -40,7 +39,7 @@
                               </thead>
                               <tbody>
                       <?php
-                      $query = $conn->prepare("SELECT apptopus_payment_month,apptopus_payment_date,apptopus_payment_checkno,apptopus_payment_bank,apptopus_payment_amount,apptopus_payment_status FROM apptopus_payment join  apptopus_externalcustomers WHERE apptopus_externalcustomers.app_school_id = apptopus_payment.apptopus_payment_id ");
+                      $query = $conn->prepare("SELECT * FROM apptopus_payment WHERE apptopus_payment_id = '$var' ");
                       $query->execute();
                       $query->setFetchMode(PDO::FETCH_ASSOC);
                       while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
@@ -83,7 +82,7 @@
                       </thead>
                       <tbody>
               <?php
-              $query = $conn->prepare("SELECT * FROM apptopus_payment");
+              $query = $conn->prepare("SELECT * FROM apptopus_payment WHERE apptopus_payment_id =");
               $query->execute();
               $query->setFetchMode(PDO::FETCH_ASSOC);
               while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
@@ -106,8 +105,18 @@
               </div>      
 
 
-              <script type="text/javascript">
-                $(document).ready(function(e) {
+          <script type="text/javascript">
+            $(document).ready(function(e) {
+            var IDS = $('#SchoolNumber option:selected').val();
+            console.log(IDS);
+
+            $.ajax({
+                        type: 'POST',
+                        data: "IDS="+IDS,
+                        success: function(data) {
+                            console.log(IDS);
+                        }
+                    });
                   $('.data').DataTable(); //datatables
 });
-              </script>      
+          </script>      
