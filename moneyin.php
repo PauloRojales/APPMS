@@ -265,6 +265,7 @@
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
 <script src="addfile/data4.js"></script>
+<script src="addfile/dump.js"></script>
 
 
 <!-- AdminLTE App -->

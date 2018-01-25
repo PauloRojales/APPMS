@@ -5,21 +5,20 @@
                 </div>
               
             <div class="form-group">
-                    <select id="Sid" class="form-control target " onchange="pos()">
-                      <option selected="selected"></option>
+                    <select id="Sid" class="form-control target ">
+                      <option ></option>
                     <?php
                     include "config.php";
                     $query = $conn->prepare("SELECT app_school_id,app_school_name FROM apptopus_externalcustomers");
                     $query->execute();
                     $query->setFetchMode(PDO::FETCH_ASSOC);
                     while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
-                    <option value="<?php echo $data["app_school_id"]; ?>"><?php 
-                    echo $data["app_school_id"]; echo $data["app_school_name"];?></option>
+                    <option value="<?php echo $data["app_school_id"]; ?>"><?php echo $data["app_school_name"];?></option>
                   <?php  }; ?>
                     </select>
                 </div>
                 </div>
-      <?php $val =$_POST['val']; echo $val; ?>
+               <?php ?>
 
 
         <div class="nav-tabs-custom">
@@ -51,7 +50,10 @@
                       </thead>
                       <tbody>
               <?php
+              $val = (isset($_POST['val'])) ? $val=$_POST['val'] : $val=1; 
               $query = $conn->prepare("SELECT * FROM apptopus_payment WHERE apptopus_payment_id ='$val'");
+
+              var_dump($val);
               $query->execute();
               $query->setFetchMode(PDO::FETCH_ASSOC);
               while ($data=$query->fetch(PDO::FETCH_ORI_NEXT)) { ?>
@@ -119,21 +121,20 @@
           </div>      
 
           <script type="text/javascript">
-          $(document).ready(function(){
-       //     var selectedValue=$('#SchoolNumber').children(":selected").val();
-       //     console.log(selectedValue);
 
 
-       //    var val= $('#Sid option:selected').val();
-        //   console.log(val);
+          $(document).ready(function(){   
 
-            $('#Sid').on('change', function() {
+                $('#Sid').click(function() {
                   var val= $(this).val();
                   console.log(val);
+
+                  $.ajax({
+                  type: 'POST',
+                  data: "val="+val,
+                });
                     });
 
                   $('.data').DataTable(); //datatables
             });
           </script>    
-
-          <script src="addfile/data4.js"></script>  
