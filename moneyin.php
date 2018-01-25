@@ -116,7 +116,7 @@
          <!-- Optionally, you can add icons to the links -->
           <li><a href="index.php"><i class="fa fa-dashboard"></i><span>Main Dashboard</span></a></li>
           <li><a href="ExternalCustomer.php"><i class="fa fa-users"></i><span>External Customers</span></a></li>
-          <li><a href="#"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
+          <li><a href="PossibleClients.php"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
           <li><a href="InternalCustomer.php"><i class="fa fa-user"></i><span></i>Internal Customers</a></span></li>
           <li class="active" ><a href="moneyin.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
           <li><a href="#"><i class="fa fa-money"></i><span>Money Out</span></a></li>
@@ -141,15 +141,25 @@
 
         <!-- Main content -->
   <section class="content">
-        <div class="box box-success">
-          <div class="box-header with-border">
-            <h4 class="box-tittle"><i class="fa fa-money"> </i> Money In</h4>
+    <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+              <li class="active"><a href="#tab_11" data-toggle="tab">Payment History</a></li>
+              <li><a href="#tab_21" data-toggle="tab">Client To Pay</a></li>
+            <div class="tab-content">
+              <div class="tab-pane active" id="tab_11">
+                    <div class="box-body">
+                     <div class="MoneyInFunc"></div>
+                    </div>
+
+              </div>
+              <div class="tab-pane" id="tab_21">
+                    <div class="box-body">
+                      <div class="ClientToPay"></div>
+                    </div>
+
+              </div>
+            </div>
           </div>
-          <div class="box-body">
-          <div class="MoneyInFunc"></div>
-          </div>
-        </div>
-    
 
     </section>
 

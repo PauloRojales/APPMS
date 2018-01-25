@@ -12,3 +12,18 @@ function MoneyINfunc() {
     }
   });
 }
+
+$(document).ready(function(e) {
+
+  ClientToPay();
+
+});
+function ClientToPay() {
+  $.ajax({
+    type: "GET",
+    url: "addfile/ClientToPay.php",
+    success: function (data){
+      $('.ClientToPay').html(data)
+    }
+  });
+}
