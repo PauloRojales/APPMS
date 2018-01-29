@@ -118,8 +118,8 @@
           <li><a href="ExternalCustomer.php"><i class="fa fa-users"></i><span>External Customers</span></a></li>
           <li><a href="PossibleClients.php"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
           <li><a href="InternalCustomer.php"><i class="fa fa-user"></i><span></i>Internal Customers</a></span></li>
-          <li class="active" ><a href="moneyin.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
-          <li><a href="#"><i class="fa fa-money"></i><span>Money Out</span></a></li>
+          <li><a href="moneyin.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
+          <li class="active"  ><a href="moneyout.php"><i class="fa fa-money"></i><span>Money Out</span></a></li>
 					</li>
 			  </ul>
       </ul>
@@ -132,7 +132,7 @@
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">
-      <h1><i class="fa fa-money"></i> Money In</h1>
+      <h1><i class="fa fa-money"></i> Money Out</h1>
       <ol class="breadcrumb">
         <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
         <li>Dashboard</li>
@@ -143,21 +143,33 @@
   <section class="content">
     <div class="nav-tabs-custom">
             <ul class="nav nav-tabs">
-              <li class="active"><a href="#tab_11" data-toggle="tab">Payment History</a></li>
-              <li><a href="#tab_21" data-toggle="tab">Client To Pay</a></li>
+              <li class="active"><a href="#tab_11" data-toggle="tab">External Customer Expenses</a></li>
+              <li><a href="#tab_21" data-toggle="tab">Utilities</a></li>
+              <li><a href="#tab_31" data-toggle="tab">Wages</a></li>
+              <li><a href="#tab_41" data-toggle="tab">Bussiness Fees</a></li>
             <div class="tab-content">
               <div class="tab-pane active" id="tab_11">
                     <div class="box-body">
-                     <div class="MoneyInFunc"></div>
+                     <div class=""></div>
                     </div>
 
               </div>
               <div class="tab-pane" id="tab_21">
                     <div class="box-body">
-                      <div class="ClientToPay"></div>
+                      <div class=""></div>
                     </div>
-
               </div>
+              <div class="tab-pane" id="tab_31">
+                    <div class="box-body">
+                      <div class=""></div>
+                    </div>
+              </div>
+              <div class="tab-pane" id="tab_41">
+                    <div class="box-body">
+                      <div class=""></div>
+                    </div>
+              </div>
+
             </div>
           </div>
 
@@ -265,6 +277,7 @@
 <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
 <script src="plugins/datatables/jquery.dataTables.js"></script>
 <script src="addfile/data4.js"></script>
+
 
 <!-- AdminLTE App -->
 <script src="dist/js/app.min.js"></script>

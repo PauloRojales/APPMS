@@ -862,7 +862,7 @@
           </div>
         </div>
    
-
+        <!--Add New Check -->
         <div class="modal" id="AddCheck">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -911,14 +911,14 @@
                       <div class="form-group">
                           <label for="" class="col-sm-3 control-label">Amout</label>
                           <div class="col-sm-9">
-                          <input type="text" class="form-control" id="PaymentAmout" maxlength="200">
+                          <input type="text" class="form-control" id="PaymentAmount" maxlength="200">
                           </div>
                       </div>
 
                       <div class="form-group">
                           <label for="" class="col-sm-3 control-label">Status</label>
                           <div class="col-sm-9">
-                          <input type="text" class="form-control" id="PaymentStatus" maxlength="200">
+                          <input type="text" class="form-control" id="PaymentStatus" maxlength="200" disabled="true">
                           </div>
                       </div>
 
@@ -933,7 +933,7 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary newemployee" data-dismiss="modal">Add</button>
+                <button type="button" class="btn btn-primary addnewcheck" data-dismiss="modal">Add</button>
               </div>
             </div>
           </div>
