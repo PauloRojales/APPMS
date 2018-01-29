@@ -148,26 +148,97 @@
               <li><a href="#tab_31" data-toggle="tab">Wages</a></li>
               <li><a href="#tab_41" data-toggle="tab">Bussiness Fees</a></li>
             <div class="tab-content">
+              <!--TAB 1-->
               <div class="tab-pane active" id="tab_11">
-                    <div class="box-body">
-                     <div class=""></div>
+
+                <div class="col-md-12">
+                 <div class="col-md-3">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">ADD</h3>
                     </div>
+                    <div class="box-body">
+                      <div class=""></div>
+                    </div>
+                </div>
+                 <div class="col-md-9">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">Table</h3>
+                    </div>
+                    <div class="box-body">
+                      <div class=""></div>
+                    </div>
+                </div>
+              </div>
 
               </div>
+              <!--TAB 2-->
               <div class="tab-pane" id="tab_21">
+
+                <div class="col-md-12">
+                 <div class="col-md-3">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">ADD</h3>
+                    </div>
                     <div class="box-body">
                       <div class=""></div>
                     </div>
+                </div>
+                 <div class="col-md-9">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">Table</h3>
+                    </div>
+                    <div class="box-body">
+                      <div class=""></div>
+                    </div>
+                </div>
               </div>
+
+              </div>
+              <!--TAB 3-->
               <div class="tab-pane" id="tab_31">
+
+                <div class="col-md-12">
+                 <div class="col-md-3">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">ADD</h3>
+                    </div>
                     <div class="box-body">
                       <div class=""></div>
                     </div>
+                </div>
+                 <div class="col-md-9">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">Table</h3>
+                    </div>
+                    <div class="box-body">
+                      <div class=""></div>
+                    </div>
+                </div>
               </div>
+
+              </div>
+              <!--TAB 4-->
               <div class="tab-pane" id="tab_41">
+
+                <div class="col-md-12">
+                 <div class="col-md-3">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">ADD</h3>
+                    </div>
                     <div class="box-body">
                       <div class=""></div>
                     </div>
+                </div>
+                 <div class="col-md-9">
+                    <div class="box-header with-border">
+                    <h3 class="box-title callout callout-info">Table</h3>
+                    </div>
+                    <div class="box-body">
+                      <div class=""></div>
+                    </div>
+                </div>
+              </div>
+
               </div>
 
             </div>
