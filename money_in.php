@@ -18,10 +18,13 @@
          page. However, you can choose any other skin. Make sure you
          apply the skin class to the body tag so the changes take effect.
          -->
+      <!-- bootstrap datepicker -->
+      <link rel="stylesheet" href="plugins/datepicker/css/bootstrap-datepicker.min.css">
       <link rel="stylesheet" href="dist/css/skins/skin-black.min.css">
+      <link rel="stylesheet" href="plugins/sweetalert/dist/sweetalert.css">
       <?php include 'addfile/session.php'; ?>
    </head>
-   <body class="hold-transition skin-black sidebar-mini">
+   <body class="hold-transition skin-black sidebar-mini sidebar-collapse">
       <div class="wrapper">
          <!-- Main Header -->
          <header class="main-header">
@@ -104,13 +107,14 @@
                <ul class="sidebar-menu">
                   <li class="header">MENU</li>
                   <!-- Optionally, you can add icons to the links -->
-                  <li class="active"><a href="index.php"><i class="fa fa-dashboard"></i><span>Main Dashboard</span></a></li>
+                  <li><a href="index.php"><i class="fa fa-dashboard"></i><span>Main Dashboard</span></a></li>
                   <li><a href="external_customer.php"><i class="fa fa-users"></i><span>External Customers</span></a></li>
                   <li><a href="possible_client.php"><i class="fa fa-users"></i><span>Possible Customers</a></span></li>
                   <li><a href="internal_customer.php"><i class="fa fa-user"></i><span></i>Internal Customers</a></span></li>
-                  <li><a href="money_in.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
+                  <li class="active"><a href="money_in.php"><i class="fa fa-money"></i><span>Money In</span></a></li>
                   <li><a href="money_out.php"><i class="fa fa-money"></i><span>Money Out</span></a></li>
                   <li><a href="add_product.php"><i class="fa fa-shopping-cart"></i><span>Add Product</span></a></li>
+                  </li>
                </ul>
                </ul>
                <!-- /.sidebar-menu -->
@@ -121,61 +125,39 @@
          <div class="content-wrapper">
             <!-- Content Header (Page header) -->
             <section class="content-header">
-               <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
+               <h1><i class="fa fa-money"></i> Money In</h1>
                <ol class="breadcrumb">
                   <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
-                  <li class="active">Dashboard</li>
+                  <li>Money In</li>
                </ol>
             </section>
             <!-- Main content -->
             <section class="content">
-               <div class="row">
-                  <div class="col-sm-6 col-md-4">
-                     <div class="info-box bg-red">
-                        <span class="info-box-icon fa fa-male"></span>
-                        <div class="info-box-content">
-                           <span class="info-box-text">External Customers</span>
-                           <span class="info-box-number">
-                              <div class="TotalExternalCustomer"></div>
-                           </span>
-                        </div>
-                     </div>
+               <div class="MoneyInFunc"></div>
+               <!-- <div class="nav-tabs-custom">
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#tab_11" data-toggle="tab">Payment History</a></li>
+                   <li><a href="#tab_21" data-toggle="tab">Client To Pay</a></li>
+                  <div class="tab-content">
+                    <div class="tab-pane active" id="tab_11">
+                          <div class="box-body">
+                          
+                          </div>
+                  
+                    </div>
+                   <!-- <div class="tab-pane" id="tab_21">
+                          <div class="box-body">
+                            <div class="ClientToPay"></div>
+                          </div>
+                  
+                    </div>
                   </div>
-                  <div class="col-sm-6 col-md-4">
-                     <div class="info-box bg-green">
-                        <span class="info-box-icon fa fa-female"></span>
-                        <div class="info-box-content">
-                           <span class="info-box-text">Possible Customers</span>
-                           <span class="info-box-number">
-                              <div class="TotalPossibleCustomer"></div>
-                           </span>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-sm-6 col-md-4">
-                     <div class="info-box bg-blue">
-                        <span class="info-box-icon"><i class="fa fa-male"></i> <i class="fa fa-female"></i></span>
-                        <div class="info-box-content">
-                           <span class="info-box-text">Internal Customers</span>
-                           <span class="info-box-number">
-                              <div class="TotalInternalCustomer"></div>
-                           </span>
-                        </div>
-                     </div>
-                  </div>
-               </div>
+                  </div>-->
             </section>
             <!-- /.content -->
          </div>
          <!-- /.content-wrapper -->
          <!-- Main Footer -->
-         <footer class="main-footer">
-            <!-- To the right -->
-            <div class="pull-right hidden-xs">
-            </div>
-            <!-- Default to the left -->
-            <strong>Copyright &copy; 2018 <a href="#">APPTOPUS</a>.</strong> All rights reserved.
-         </footer>
          <!-- Control Sidebar -->
          <aside class="control-sidebar control-sidebar-dark">
             <!-- Create the tabs -->
@@ -249,12 +231,14 @@
       <!-- ./wrapper -->
       <!-- REQUIRED JS SCRIPTS -->
       <!-- jQuery 2.2.3 -->
+      <script src="plugins/sweetalert/dist/sweetalert.min.js"></script>
       <script src="plugins/jQuery/jquery-2.2.3.min.js"></script>
       <!-- Bootstrap 3.3.6 -->
       <script src="bootstrap/js/bootstrap.min.js"></script>
-      <script src="plugins/datepicker/bootstrap-datepicker.js"></script>
+      <!-- bootstrap datepicker -->
+      <script src="plugins/datepicker/js/bootstrap-datepicker.min.js"></script>
       <script src="plugins/datatables/jquery.dataTables.js"></script>
-      <script src="addfile/index_data.js"></script>
+      <script src="addfile/moneyin_data.js"></script>
       <!-- AdminLTE App -->
       <script src="dist/js/app.min.js"></script>
    </body>
